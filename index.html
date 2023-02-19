@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <title>BMI calculator</title>
+</head>
+<body>
+    <div class="page">
+          <div class="nav-bar">
+             <div class="logo">BMI calculator</div>
+          </div>
+
+          <div class="container" id="data-container">
+               <div id="data">
+                  <label for="height">Type your Height :</label>
+                  <input type="number" placeholder=" in cm" name="height" id="height" class="text">
+                  <label for="weight">type your Weight :</label>
+                  <input type="number" placeholder=" in kg" name="weight" id="weight" class="text">
+                  
+                  <label for="age">type your age :</label>
+                  <input type="number" placeholder=" 0" name="age" id="age" class="text">
+                  <div>
+                         <label for="male">male</label>
+                         <input type="radio" name="gender" id="gender" value="male">
+                         <label for="female">female</label>
+                         <input type="radio" name="gender" id="gender" value="female">
+                  </div>
+                  <button onclick="clicked()" class="next">Next</button>
+               </div>
+            <svg class="blob2" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <g transform="translate(-246, 87)">
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="10%" style="stop-color: rgb(27, 35, 141);"></stop>
+                      <stop offset="100%" style="stop-color: rgba(12, 1, 77, 0.158);"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path class="blob" d="M455.5,283Q453,316,437,345Q421,374,408.5,412.5Q396,451,361,467.5Q326,484,288,481.5Q250,479,215.5,470.5Q181,462,145,453Q109,444,92.5,410.5Q76,377,56,348Q36,319,35.5,284.5Q35,250,38,216Q41,182,57,151.5Q73,121,91,88.5Q109,56,144.5,45.5Q180,35,215,39Q250,43,282,48Q314,53,351,56.5Q388,60,406.5,91.5Q425,123,455.5,148Q486,173,472,211.5Q458,250,455.5,283Z" fill="url(#gradient)"></path>
+                </g>
+              </svg>
+              <svg class="blob1" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <g transform="translate(388, -155)">
+                  <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color: rgb(194, 229, 156);"></stop>
+                      <stop offset="100%" style="stop-color: rgb(100, 179, 244);"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path class="blob" d="M470.5,281.5Q445,313,431,342Q417,371,398,399Q379,427,353,456.5Q327,486,288.5,483.5Q250,481,212,482Q174,483,151,450.5Q128,418,88.5,407Q49,396,50.5,355Q52,314,37.5,282Q23,250,28.5,215Q34,180,59.5,155Q85,130,101.5,99Q118,68,152.5,62.5Q187,57,218.5,52Q250,47,284.5,41.5Q319,36,347.5,56.5Q376,77,405,96.5Q434,116,460.5,144.5Q487,173,491.5,211.5Q496,250,470.5,281.5Z" fill="url(#gradient)"></path>
+                </g>
+              </svg>
+          </div>
+             
+          <div class="container" id="result">
+                <button onclick="location.href='#data-container'" class="btn1 btn">back</button>
+                <button onclick="location.href='#informations'" class="btn2 btn">next</button>
+                <h1>Your BMI is :</h1>
+                <h2 id="bmi-result">0</h2>
+                <h3 id="comment">normal</h3>
+                <div class="chart-div" id="chart" data-aos="fade-in">
+                    <img src="icons/chart.png" class="chart">
+                    <img src="icons/arrow.png" class="arrow" id="arrow">
+                </div>
+          </div>
+               
+
+    </div>
+    
+</body>
+ <script src="index.js"></script>
+ 
+</html>
